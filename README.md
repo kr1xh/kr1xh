@@ -1,16 +1,43 @@
-## Hi there 👋
+# Hi, I'm Krish C.
 
-<!--
-**kr1xh/kr1xh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I work at the intersection of **mathematics, AI, and robotics**, with a strong focus on fundamentals and consistency.
 
-Here are some ideas to get you started:
+I care about understanding systems deeply, building them carefully, and improving a little every day.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Focus
+
+* Mathematics (foundations first)
+* Artificial Intelligence
+* Robotics
+* Data Structures & Algorithms
+* Open Source (learning by contribution)
+
+---
+
+## Approach
+
+* Math-first problem solving
+* Discipline over motivation
+* Long-term thinking
+* Clean, maintainable work
+
+---
+
+## What I'm doing
+
+* Strengthening core mathematics
+* Building AI and robotics-oriented projects
+* Practicing DSA consistently
+* Learning in public through YouTube
+
+---
+
+## Elsewhere
+
+* YouTube: sharing my learning process and explanations
+
+---
+
+I value clarity, depth, and steady progress over shortcuts.
