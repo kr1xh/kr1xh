@@ -1,6 +1,6 @@
 # Hi, I'm Krish C.
 
-I work at the intersection of **mathematics, AI/ML, and robotics**, with a strong focus on fundamentals and consistency.
+I work at the intersection of **AI/ML and Robotics**
 
 I care about understanding systems deeply, building them carefully, and improving a little every day.
 
