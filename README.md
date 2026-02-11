@@ -8,12 +8,12 @@ I care about understanding systems deeply, building them carefully, and improvin
 
 ## Focus
 
-* Mathematics (foundations first)
+* Mathematics
 * Artificial Intelligence
 * Machine Learning
 * Robotics
 * Data Structures & Algorithms
-* Open Source (learning by contribution)
+* Open Source Contributions
 
 ---
 
