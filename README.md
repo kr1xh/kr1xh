@@ -1,4 +1,4 @@
-# Krish [Surname]
+# Krish Chandpurkar
 
 Computer Science student working toward applied machine learning, with a particular interest in efficient fine-tuning and language model evaluation.
 
