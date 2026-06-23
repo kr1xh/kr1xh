@@ -1,41 +1,17 @@
-# Hi, I'm Krish C.
+# Krish [Surname]
 
-I work at the intersection of **AI/ML and Robotics**
+Computer Science student working toward applied machine learning, with a particular interest in efficient fine-tuning and language model evaluation.
 
-I care about understanding systems deeply, building them carefully, and improving a little every day.
+## Background
 
----
+Reading for a BCA at GH Raisoni College of Engineering and Management, Nagpur, alongside a BS in Data Science at IIT Madras. International Judge for the NASA Space Apps Challenge.
 
-## Focus
+## Current Focus
 
-* Mathematics
-* Artificial Intelligence
-* Machine Learning
-* Robotics
-* Data Structures & Algorithms
-* Open Source Contributions
+- Mathematical foundations for machine learning — linear algebra, calculus, probability
+- Deep learning through PyTorch, following established coursework and primary texts rather than tutorials alone
+- Voice and workflow automation built on n8n, Retell AI, and the OpenAI API
 
----
+## Contact
 
-## Approach
-
-* Math first problem solving
-* Discipline over motivation
-* Long term thinking
-
----
-
-## What I'm doing
-
-* Strengthening core mathematics
-* Building AI and robotics-oriented projects
-* Practicing DSA consistently
-* Learning in public through YouTube
-
----
-
-## Elsewhere
-
-* YouTube: sharing my learning process and explanations
-
----
+[[LinkedIn]](https://www.linkedin.com/in/kr1xh/) · Nagpur, India
