@@ -8,9 +8,9 @@ PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 CELL = 13
 GAP = 3
 LEFT = 28
-TOP = 26
+TOP = 25
 WIDTH = 980
-HEIGHT = 148
+HEIGHT = 170
 
 
 def esc(value):
@@ -40,7 +40,7 @@ def main():
     stats = payload.get("stats", {})
     total = int(stats.get("total", 0))
     streak = int(stats.get("current_streak", 0))
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" preserveAspectRatio="xMidYMid meet">
 <style>
 .cell {{ opacity:0; transform-box:fill-box; transform-origin:center; animation:reveal .45s ease-out var(--delay) forwards; }}
 @keyframes reveal {{ from {{ opacity:0; transform:translateY(-7px) scale(.82); }} to {{ opacity:1; transform:translateY(0) scale(1); }} }}
@@ -50,14 +50,14 @@ def main():
 <rect width="100%" height="100%" rx="10" fill="#0d1117"/>
 <text x="28" y="17" class="label">contributions — last 53 weeks</text>
 {''.join(rects)}
-<text x="28" y="140" class="label">Less</text>
-<rect x="58" y="131" width="13" height="13" rx="3" fill="{PALETTE[0]}"/>
-<rect x="77" y="131" width="13" height="13" rx="3" fill="{PALETTE[1]}"/>
-<rect x="96" y="131" width="13" height="13" rx="3" fill="{PALETTE[2]}"/>
-<rect x="115" y="131" width="13" height="13" rx="3" fill="{PALETTE[3]}"/>
-<rect x="134" y="131" width="13" height="13" rx="3" fill="{PALETTE[4]}"/>
-<text x="154" y="140" class="label">More</text>
-<text x="952" y="140" text-anchor="end" class="stat">{total:,} contributions · {streak} day streak</text>
+<text x="28" y="160" class="label">Less</text>
+<rect x="58" y="151" width="13" height="13" rx="3" fill="{PALETTE[0]}"/>
+<rect x="77" y="151" width="13" height="13" rx="3" fill="{PALETTE[1]}"/>
+<rect x="96" y="151" width="13" height="13" rx="3" fill="{PALETTE[2]}"/>
+<rect x="115" y="151" width="13" height="13" rx="3" fill="{PALETTE[3]}"/>
+<rect x="134" y="151" width="13" height="13" rx="3" fill="{PALETTE[4]}"/>
+<text x="154" y="160" class="label">More</text>
+<text x="952" y="160" text-anchor="end" class="stat">{total:,} contributions · {streak} day streak</text>
 </svg>'''
     OUT.write_text(svg, encoding="utf-8")
 
