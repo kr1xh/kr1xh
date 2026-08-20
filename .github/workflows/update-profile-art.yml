@@ -25,12 +25,30 @@ jobs:
       - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
       - run: python scripts/fetch_contributions.py
       - run: python scripts/render_heatmap_svg.py
-      - name: Rebase on latest main
+      - name: Commit and push generated files
+        shell: bash
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-      - uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          git add data/contributions.json contrib-heatmap.svg
+
+          if git diff --cached --quiet; then
+            echo "No contribution changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh contribution graph [skip ci]"
+
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying..."
+            git rebase --abort || true
+            sleep 3
+          done
+
+          echo "Unable to push generated contribution files after 3 attempts."
+          exit 1
