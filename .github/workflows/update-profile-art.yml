@@ -4,23 +4,32 @@ on:
   schedule:
     - cron: "17 6 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-art
+  cancel-in-progress: true
 
 jobs:
   heatmap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - run: pip install requests==2.32.3 beautifulsoup4==4.12.3
       - run: python scripts/fetch_contributions.py
       - run: python scripts/render_heatmap_svg.py
+      - name: Rebase on latest main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"
